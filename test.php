@@ -12,12 +12,12 @@ $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
 try {
     // Create a PDO instance
     $pdo = new PDO($dsn, $username, $password);
-    
+
     // Set error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+
     echo "Connection successful!";
 } catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage()."\n";
+    echo "Connection failed: " . $e->getMessage() . "\n";
 }
 ?>
